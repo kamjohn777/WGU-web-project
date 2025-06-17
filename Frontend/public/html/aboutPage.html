@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page - Trade</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+        header .logo {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #333;
+        }
+        header nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #777;
+        }
+        header .cta-buttons a {
+            margin-left: 10px;
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+        }
+        header .cta-buttons a.signup {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .hero-about {
+            display: flex;
+            justify-content: space-between;
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        .hero-about .text-content {
+            width: 45%;
+            padding-right: 20px;
+        }
+        .hero-about .text-content h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .hero-about .text-content p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .hero-about .text-content .btn {
+            background-color: #000;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .hero-about .video-placeholder {
+            width: 50%;
+            background-color: #eee; /* Light grey box */
+            min-height: 300px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #888;
+            font-style: italic;
+        }
+
+        .trusted-companies {
+            text-align: center;
+            padding: 60px 0;
+            background-color: #f8f8f8;
+        }
+        .trusted-companies h2 {
+            font-size: 1.2em;
+            color: #777;
+            margin-bottom: 30px;
+        }
+        .company-logos {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        .company-logo-placeholder {
+            width: 70px;
+            height: 70px;
+            background-color: #000; /* Black circle placeholder */
+            border-radius: 50%;
+        }
+
+        .feature-block {
+            display: flex;
+            background-color: #000;
+            color: #fff;
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+        .feature-block .image-placeholder {
+            width: 40%;
+            background-color: #fff; /* White box */
+            min-height: 300px;
+            margin-right: 40px;
+        }
+        .feature-block .text-content {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .feature-block .text-content h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .feature-block .text-content p {
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+        .feature-block .text-content .btn {
+            background-color: #fff;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            align-self: flex-start;
+        }
+
+        .publication-section {
+            text-align: center;
+            padding: 60px 0;
+            background-color: #f8f8f8;
+            margin-top: 40px;
+        }
+        .publication-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .publication-section p {
+            color: #777;
+            margin-bottom: 40px;
+        }
+        .publication-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .publication-item {
+            width: 15%;
+            background-color: #000; /* Placeholder for black box */
+            height: 80px;
+        }
+
+        .article-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 60px 0;
+        }
+        .article-block.main {
+            width: 40%;
+            background-color: #000;
+            color: #fff;
+            padding: 50px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Pushes content to the bottom */
+        }
+        .article-block.main h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .article-block.main .category {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        .article-block.main .read-more {
+            background-color: #fff;
+            color: #333;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            align-self: flex-start;
+            margin-top: 20px;
+        }
+        .article-block.side {
+            width: 25%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .article-block.side h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .article-block.side p {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .article-block.side .read-more {
+            text-decoration: none;
+            color: #007bff; /* Placeholder for blue link */
+            font-size: 0.9em;
+        }
+        .article-block.side .category {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        footer .footer-col {
+            width: 22%;
+            margin-bottom: 20px;
+        }
+        footer .footer-col.logo {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        footer .footer-col h4 {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            color: #fff;
+        }
+        footer .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        footer .footer-col ul li a {
+            text-decoration: none;
+            color: #ccc;
+        }
+        footer .footer-col p {
+            font-size: 0.9em;
+            color: #ccc;
+            line-height: 1.6;
+        }
+        footer .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #aaa;
+        }
+        footer .ready-to-get-started {
+            width: 40%;
+            background-color: #333; /* Same as footer background */
+            padding: 20px;
+            color: #fff;
+        }
+        footer .ready-to-get-started h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        footer .ready-to-get-started p {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+        footer .ready-to-get-started .btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <header>
+        <div class="logo">TRADE</div>
+        <nav>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </nav>
+        <div class="cta-buttons">
+            <a href="#">API</a>
+            <a href="#">Help</a>
+            <a href="#">Login</a>
+            <a href="#" class="signup">Sign Up</a>
+        </div>
+    </header> -->
+
+    <!-- <div id="header-placeholder"></div> -->
+
+    <div class="container hero-about">
+        <div class="text-content">
+            <h1>About Page<br>Your Best Value<br>Proposition</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#" class="btn">Start Free Trial</a>
+        </div>
+        <div class="video-placeholder">
+            </div>
+    </div>
+
+    <div class="trusted-companies">
+        <h2>Trusted by the World's Best Companies</h2>
+        <div class="company-logos">
+            <div class="company-logo-placeholder"></div>
+            <div class="company-logo-placeholder"></div>
+            <div class="company-logo-placeholder"></div>
+            <div class="company-logo-placeholder"></div>
+            <div class="company-logo-placeholder"></div>
+        </div>
+    </div>
+
+    <div class="container feature-block">
+        <div class="image-placeholder"></div>
+        <div class="text-content">
+            <h3>Feature that is amazing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+    </div>
+
+    <div class="publication-section">
+        <h2>The Publication</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="publication-grid">
+            <div class="publication-item"></div>
+            <div class="publication-item"></div>
+            <div class="publication-item"></div>
+            <div class="publication-item"></div>
+            <div class="publication-item"></div>
+            <div class="publication-item"></div>
+        </div>
+    </div>
+
+    <div class="container article-section">
+        <div class="article-block main">
+            <div class="category">Article</div>
+            <h2>The best way to wireframe a website</h2>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="article-block side">
+            <div class="category">Article</div>
+            <h3>Keys to writing copy that actually converts</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="article-block side">
+            <div class="category">Article</div>
+            <h3>Keys to writing copy that actually converts</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-col ready-to-get-started">
+            <h3>Ready to get started?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+                <li><a href="#">Lorem ipsum</a></li>
+                <li><a href="#">Lorem ipsum</a></li>
+                <li><a href="#">Lorem ipsum</a></li>
+                <li><a href="#">Lorem ipsum</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            © 2025 Trade - All Rights Reserved.
+        </div>
+    </footer>
+<script src="../javaScript/header.js"></script>
+</body>
+</html>
