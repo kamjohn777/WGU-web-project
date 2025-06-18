@@ -67,6 +67,8 @@ header .cta-buttons a.signup {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* might remove the margin */
+  margin-left: 100px;
 }
 
 .hero-main h1 {
@@ -124,7 +126,8 @@ header .cta-buttons a.signup {
   height: 60rem;
   position: absolute;
   display: flex;
-  left: 16%;
+  /* left: 16%; */
+  left: 20%;
   top: -90px;
 }
 
@@ -132,7 +135,7 @@ header .cta-buttons a.signup {
   width: 889px;
   height: 867px;
   border-radius: 50%;
-  background-color: var(--baby-blue);
+  background-color: var(--lighter-blue);
   position: absolute; /* Pin the element to the viewport */
   top: -200px; /* Adjust vertical placement */
   left: -200px; /* Adjust horizontal placement */
@@ -146,13 +149,59 @@ header .cta-buttons a.signup {
   background-color: var(--baby-blue);
   position: absolute;
   top: -131px;
-  left: -377px;
+  /* left: -377px; */
+  /* left: -273px; */
+  left: -286px;
   z-index: -1;
 }
 
 .hero-image .image-wrapper img {
   height: 500px;
   width: 500px;
+  /* might remove the margin left */
+  margin-left: 93px;
+}
+
+.style-txt {
+  z-index: 1000;
+  position: relative;
+  /* right: 25%;
+  top: -10%; */
+  right: 28%;
+  top: -5%;
+  height: 100%;
+  width: 100%;
+}
+
+.live-txt {
+  position: absolute;
+  top: 5%;
+  transform: rotate(90deg); 
+  display: inline-block; 
+  /* font-size: 115px; */
+  font-size: 120px;
+  color: transparent;
+  -webkit-text-stroke: 4px var(--white); 
+  /* top: 41%;
+  left: 30%; */
+  top: 39%;
+  left: 34%;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.stronger-txt {
+    position: absolute;
+    top: 5%;
+    display: inline-block;
+    /* font-size: 95px; */
+    font-size: 125px;
+    color: transparent;
+    -webkit-text-stroke: 4px var(--white);
+    top: 71%;
+    left: 31%;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
 .content-section {
