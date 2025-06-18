@@ -11,7 +11,12 @@ app.use(express.static(path.join(__dirname, '../Frontend/public')));
 
 app.get('/', (req, res) => {
     app.use(express.static(path.join(__dirname, '../Frontend/public')));
-    res.sendFile(path.join(__dirname, '../Frontend/public/html/home.html'));
+    app.use('/assets', express.static(path.join(__dirname, '../Frontend/assets')));    res.sendFile(path.join(__dirname, '../Frontend/public/html/home.html'));
+})
+
+app.get('/landingPage', (req,res) => {
+    app.use(express.static(path.join(__dirname, '../Frontend/public')));
+    res.sendFile(path.join(__dirname, '../Frontend/public/html/landingPage.html'));
 })
 
 app.get('/about', (req, res) => {
