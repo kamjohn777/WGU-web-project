@@ -1,9 +1,17 @@
 #header-placeholder header {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
   border-bottom: 1px solid #eee;
   width: 90%;
+  margin: auto; */
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: none;
+  width: 97%;
   margin: auto;
 }
