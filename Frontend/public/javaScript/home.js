@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "../../assets/images/HomePage-assets/Deals/Gemini_Generated_Image_s5abfas5abfas5ab.png",
       title: "Deal 7",
       expires: new Date("2026-4-30"),
-    },     
+    },
   ];
 
   const defaultDeals = [
@@ -63,35 +63,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainBlock = document.querySelector(".content-block.main");
   const sideBlock = document.querySelector(".content-block.side");
 
-    // Display deals in the main block
-    mainBlock.style.backgroundImage = `url(${dealsImageArray[1].image})`;
-    sideBlock.style.backgroundImage = `url(${dealsImageArray[0].image})`;
+  // Display deals in the main block
+  mainBlock.style.backgroundImage = `url(${dealsImageArray[1].image})`;
+  sideBlock.style.backgroundImage = `url(${dealsImageArray[0].image})`;
 
-     // Additional styling for the divs
-    mainBlock.style.backgroundPosition = "center";
-    mainBlock.style.backgroundSize = "cover";
-    mainBlock.style.backgroundRepeat = "no-repeat";
-    mainBlock.style.boxshadow = '3px 3px 4px #00000057';
+  // Additional styling for the divs
+  mainBlock.style.backgroundPosition = "center";
+  mainBlock.style.backgroundSize = "cover";
+  mainBlock.style.backgroundRepeat = "no-repeat";
+  mainBlock.style.boxshadow = "3px 3px 4px #00000057";
 
-    sideBlock.style.backgroundPosition = "center";
-    sideBlock.style.backgroundSize = "cover";
-    sideBlock.style.backgroundRepeat = "no-repeat";
-    sideBlock.style.boxshadow = '3px 3px 4px #00000057';
-//   function displayDeal(deal) {
+  sideBlock.style.backgroundPosition = "center";
+  sideBlock.style.backgroundSize = "cover";
+  sideBlock.style.backgroundRepeat = "no-repeat";
+  sideBlock.style.boxshadow = "3px 3px 4px #00000057";
+  //   function displayDeal(deal) {
 
-//   }
+  //   }
 
-let currentDealIndex = 0;
+  let currentDealIndex = 0;
 
-function rotateDeals() {
+  function rotateDeals() {
     // Rotate through dealsImageArray for mainBlock and sideBlock
     const mainDeal = dealsImageArray[currentDealIndex];
 
     let sideDealIndex = (currentDealIndex + 1) % dealsImageArray.length; // Next deal for sideBlock
     while (dealsImageArray[sideDealIndex].image === mainDeal.image) {
-        sideDealIndex = (sideDealIndex + 1) % dealsImageArray.length;
-      }
-      const sideDeal = dealsImageArray[sideDealIndex];
+      sideDealIndex = (sideDealIndex + 1) % dealsImageArray.length;
+    }
+    const sideDeal = dealsImageArray[sideDealIndex];
 
     mainBlock.style.backgroundImage = `url(${mainDeal.image})`;
     sideBlock.style.backgroundImage = `url(${sideDeal.image})`;
@@ -99,34 +99,39 @@ function rotateDeals() {
     currentDealIndex = (currentDealIndex + 1) % dealsImageArray.length;
   }
 
-setInterval(rotateDeals, 3600000); 
-  
-rotateDeals();
+  setInterval(rotateDeals, 3600000);
 
+  rotateDeals();
 
-// Special Features dynamic content
+  // Special Features dynamic content
   const specialFeatures = [
     {
-        image: "../../assets/images/HomePage-assets/SpecialFeatures/Gemini_Generated_Image_17rs3117rs3117rs.png",
-        title: "Feature 1",
+      image:
+        "../../assets/images/HomePage-assets/SpecialFeatures/Gemini_Generated_Image_17rs3117rs3117rs.png",
+      title: "Feature 1",
     },
     {
-        image: "../../assets/images/HomePage-assets/SpecialFeatures/Gemini_Generated_Image_7ar3u47ar3u47ar3.png",
-        title: "Feature 2",
+      image:
+        "../../assets/images/HomePage-assets/SpecialFeatures/Gemini_Generated_Image_7ar3u47ar3u47ar3.png",
+      title: "Feature 2",
     },
     {
-        image: "../../assets/images/HomePage-assets/SpecialFeatures/Gemini_Generated_Image_cq1nk2cq1nk2cq1n.png",
-        title: "Feature 3",
+      image:
+        "../../assets/images/HomePage-assets/SpecialFeatures/Gemini_Generated_Image_cq1nk2cq1nk2cq1n.png",
+      title: "Feature 3",
     },
     {
-        image: "../../assets/images/HomePage-assets/SpecialFeatures/Gemini_Generated_Image_na1145na1145na11.png",
-        title: "Feature 4",
+      image:
+        "../../assets/images/HomePage-assets/SpecialFeatures/Gemini_Generated_Image_na1145na1145na11.png",
+      title: "Feature 4",
     },
-  ]
+  ];
 
-  const specialFeatureContainer = document.querySelector(".special-features-wrap");
+  const specialFeatureContainer = document.querySelector(
+    ".special-features-wrap"
+  );
 
-specialFeatures.forEach(feature => {
+  specialFeatures.forEach((feature) => {
     // Create the main feature container
     const featureDiv = document.createElement("div");
     featureDiv.className = "special-feature";
@@ -150,5 +155,5 @@ specialFeatures.forEach(feature => {
 
     // Append the main feature container to the special features wrap
     specialFeatureContainer.appendChild(featureDiv);
-});
+  });
 });
