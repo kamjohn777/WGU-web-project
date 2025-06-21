@@ -578,6 +578,45 @@ header .cta-buttons a.signup {
   width: 30rem;
 }
 
+.text-content h2 {
+  font-size: 2rem;
+}
+
+.text-content p {
+  line-height: 1.5;
+}
+
+.text-content strong {
+  color: var(--box-jump-blue);
+  font-family: "Rock Salt", cursive;
+  margin-left: 3px;
+  margin-right: 7px;
+}
+
+.text-content span {
+  color: var(--box-jump-blue);
+  font-family: "roboto", sans-serif;
+}
+
+.text-content em {
+  display: block;
+  font-size: 0.8rem;
+  width: 400px;
+  margin-left: 35px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.text-content em:last-child {
+  margin-top: 20px;
+}
+
+.text-content .span-phrase {
+  color: var(--box-jump-blue);
+  font-family: "roboto", sans-serif;
+  font-weight: 500;
+}
+
 .image-block {
   position: relative;
   width: 57%; /* Adjust as needed */
