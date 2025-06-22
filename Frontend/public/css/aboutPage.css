@@ -15,7 +15,7 @@ body {
 .container {
   /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 20px;
+  /* padding: 20px; */
 }
 header {
   display: flex;
@@ -105,72 +105,69 @@ header .cta-buttons a.signup {
   border-radius: 4px;
 }
 .light-blue-circle {
-    /* height: 200px;
+  /* height: 200px;
     width: 200px;
     border-radius: 50%;
     background-color: var(--baby-blue); */
 
-    /* height: 350px;
+  /* height: 350px;
     width: 350px; */
 
-    /* height: 300px;
+  /* height: 300px;
     width: 300px; */
 
-    /* height: 400px;
+  /* height: 400px;
     width: 400px;
     border-radius: 50%;
     background-color: var(--baby-blue);
     position: relative;
     top: -8%; */
 
-
-    /* height: 450px;
+  /* height: 450px;
     width: 450px; */
 
-    height: 421px;
-    width: 421px;
-    border-radius: 50%;
-    background-color: var(--baby-blue);
-    position: relative;
-    /* top: -8%; */
+  height: 421px;
+  width: 421px;
+  border-radius: 50%;
+  background-color: var(--baby-blue);
+  position: relative;
+  /* top: -8%; */
 
-    position: absolute;
-    /* top: -8%; */
-    top: -5%;
-    left: 2.5%;
-    /* left: 8.5%; */
+  position: absolute;
+  /* top: -8%; */
+  top: -5%;
+  left: 2.5%;
+  /* left: 8.5%; */
 
-    /* top: -10%;
+  /* top: -10%;
     left: -7%; */
-
 }
 
 .trainer-div {
-    background-image: url(../../assets/images/AboutPage-assets/Gemini_Generated_Image_n0pqqzn0pqqzn0pq-removebg-preview\ 1.png);
-    background-size: cover;
-    background-position: center;
-    /* width: 100%;
+  background-image: url(../../assets/images/AboutPage-assets/Gemini_Generated_Image_n0pqqzn0pqqzn0pq-removebg-preview\ 1.png);
+  background-size: cover;
+  background-position: center;
+  /* width: 100%;
     height: 100%; */
 
-    /* width: 561px;
+  /* width: 561px;
     height: 561px;
     position: absolute;
     top: -13%;
     left: 11%;
     z-index: 1; */
 
+  /* width: 600px; */
+  width: 575px;
+  height: 561px;
+  position: absolute;
+  top: -6%;
+  /* left: 2%; */
+  left: -6%;
+  /* left: 0; */
+  z-index: 1;
 
-    /* width: 600px; */
-    width: 575px;
-    height: 561px;
-    position: absolute;
-    top: -6%;
-    /* left: 2%; */
-    left: -6%;
-    /* left: 0; */
-    z-index: 1;
-
-    /* width: 500px;
+  /* width: 500px;
     height: 500px;
     position: absolute;
     top: 0;
@@ -192,54 +189,107 @@ header .cta-buttons a.signup {
 }
 
 .sketch-about-img-wrap {
-    z-index: 100;
-    position: relative;
-    height: 100%;
-    width: 100%;
+  z-index: 100;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .div-img1 {
-    width: fit-content;
-    position: absolute;
-    /* left: 58%; */
-    left: 46%;
+  width: fit-content;
+  position: absolute;
+  /* left: 58%; */
+  left: 46%;
 }
 
 .div-img2 {
-    width: fit-content;
-    position: absolute;
-    /* left: -3%; */
-    left: -15%;
-    top: 8%;
+  width: fit-content;
+  position: absolute;
+  /* left: -3%; */
+  left: -15%;
+  top: 8%;
 }
 
 .div-img3 {
-    width: fit-content;
-    position: absolute;
-    /* left: 55%; */
-    left: 52%;
-    top: 66%;
+  width: fit-content;
+  position: absolute;
+  /* left: 55%; */
+  left: 52%;
+  top: 66%;
 }
 
-.trusted-companies {
+.trusted-trainers {
   text-align: center;
   padding: 60px 0;
-  background-color: #f8f8f8;
+  background-color: #FFFFFF;
 }
-.trusted-companies h2 {
-  font-size: 1.2em;
-  color: #777;
-  margin-bottom: 30px;
+.trusted-trainers h2 {
+  /* font-size: 1.2em; */
+  font-size: 1.4rem;
+  /* color: #777; */
+  color: var(--nourish-navy);
+  /* margin-bottom: 30px; */
+  
 }
+.trusted-h2 span {
+  color: var(--box-jump-blue);
+  font-family: "Rock Salt", cursive;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.trusted-trainers p {
+  color: var(--nourish-navy);
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  margin-bottom: 100px;
+}
+
 .company-logos {
   display: flex;
   justify-content: center;
   gap: 40px;
 }
 .company-logo-placeholder {
-  width: 70px;
-  height: 70px;
-  background-color: #000; /* Black circle placeholder */
+  /* width: 70px;
+  height: 70px; */
+
+  width: 100px;
+  height: 100px;
+  /* background-color: #000; */
+  background-color: var(--baby-blue);
+  border-radius: 50%;
+}
+
+.company-logo-placeholder img {
+  position: relative;
+  top: -48%;
+  border-radius: 50%;
+}
+
+.company-logo-placeholder.img1 img {
+  position: relative;
+  top: -39%;
+  left: -3%;
+  border-radius: 50%;
+}
+
+.company-logo-placeholder.img4 img {
+  position: relative;
+  top: -36%;
+  border-radius: 50%;
+}
+
+.company-logo-placeholder.img5 img {
+  position: relative;
+  top: -31%;
+  border-radius: 50%;
+}
+
+.company-logo-placeholder.img6 img {
+  position: relative;
+  top: -39%;
+  left: -6%;
   border-radius: 50%;
 }
 
@@ -247,14 +297,39 @@ header .cta-buttons a.signup {
   display: flex;
   background-color: #000;
   color: #fff;
-  padding: 60px 0;
+  /* padding: 60px 0; */
   margin-top: 40px;
 }
 .feature-block .image-placeholder {
-  width: 40%;
-  background-color: #fff; /* White box */
-  min-height: 300px;
-  margin-right: 40px;
+  /* width: 45%; */
+  width: 52%;
+  /* background-color: #fff; */
+    /* background-color: linear-gradient(to right, #155EBC, #4777C7, #5F84CC, #CFD6E8); */
+    background: linear-gradient(to right, #155EBC, #4777C7, #5F84CC, #CFD6E8);
+    /* min-height: 300px; */
+  /* margin-right: 40px; */
+  height: 598px;
+  position: relative;
+}
+.feature-block .image-placeholder img {
+  /* margin-left: 53px; */
+  margin-left: 135px;
+}
+.spn-txt {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: absolute;
+    top: 15%;
+    left: 17%;
+}
+.start-txt {
+    font-size: 3rem;
+    color: var(--white);
+}
+.finish-txt {
+    font-size: 3rem;
+    color: var(--white);
 }
 .feature-block .text-content {
   width: 50%;
