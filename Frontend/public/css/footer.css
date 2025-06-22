@@ -1,0 +1,69 @@
+/*  */
+@import url(./variables.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap");
+
+footer {
+  /* background-color: #333; */
+  background-color: var(--nourish-navy);
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.left-wrap {
+  width: 45%;
+  display: flex;
+}
+
+.right-wrap {
+  width: 27%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .footer-col {
+  width: 75%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer-col.logo {
+  font-weight: bold;
+  font-size: 1.2em;
+  width: 20%;
+}
+footer .footer-col h4 {
+  /* margin-bottom: 15px; */
+  margin: 0;
+  font-size: 1.1em;
+  color: #fff;
+}
+footer .footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+footer .footer-col ul li {
+  margin-bottom: 10px;
+}
+footer .footer-col ul li a {
+  text-decoration: none;
+  color: #ccc;
+}
+footer .footer-col p {
+  font-size: 0.9em;
+  color: #ccc;
+  line-height: 1.6;
+}
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: #aaa;
+}
