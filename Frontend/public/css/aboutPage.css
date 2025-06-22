@@ -124,14 +124,24 @@ header .cta-buttons a.signup {
     top: -8%; */
 
 
-    height: 450px;
-    width: 450px;
+    /* height: 450px;
+    width: 450px; */
+
+    height: 421px;
+    width: 421px;
     border-radius: 50%;
     background-color: var(--baby-blue);
     position: relative;
     /* top: -8%; */
-    top: -10%;
-    left: -7%;
+
+    position: absolute;
+    /* top: -8%; */
+    top: -5%;
+    left: 2.5%;
+    /* left: 8.5%; */
+
+    /* top: -10%;
+    left: -7%; */
 
 }
 
@@ -150,12 +160,14 @@ header .cta-buttons a.signup {
     z-index: 1; */
 
 
-    width: 600px;
+    /* width: 600px; */
+    width: 575px;
     height: 561px;
     position: absolute;
     top: -6%;
     /* left: 2%; */
-    left: 0;
+    left: -6%;
+    /* left: 0; */
     z-index: 1;
 
     /* width: 500px;
@@ -177,6 +189,36 @@ header .cta-buttons a.signup {
   color: #888;
   font-style: italic;
   position: relative;
+}
+
+.sketch-about-img-wrap {
+    z-index: 100;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.div-img1 {
+    width: fit-content;
+    position: absolute;
+    /* left: 58%; */
+    left: 46%;
+}
+
+.div-img2 {
+    width: fit-content;
+    position: absolute;
+    /* left: -3%; */
+    left: -15%;
+    top: 8%;
+}
+
+.div-img3 {
+    width: fit-content;
+    position: absolute;
+    /* left: 55%; */
+    left: 52%;
+    top: 66%;
 }
 
 .trusted-companies {
