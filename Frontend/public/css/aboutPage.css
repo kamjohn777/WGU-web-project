@@ -320,16 +320,22 @@ header .cta-buttons a.signup {
     flex-direction: column;
     width: fit-content;
     position: absolute;
-    top: 15%;
-    left: 17%;
+    top: 20%;
+    left: 5%;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
 }
 .start-txt {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--white);
+    font-family: "Rubik Mono One", monospace;
+    margin-bottom: 10px;
 }
 .finish-txt {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--white);
+    font-family: "Rubik Mono One", monospace;
 }
 .feature-block .text-content {
   width: 50%;
