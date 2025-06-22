@@ -32,7 +32,15 @@ footer .footer-col {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /* border-right: 1px solid white;
+  padding-right: 70px; */
 }
+
+footer .footer-col.txt {
+    border-right: 1px solid white;
+    padding-right: 70px;
+}
+
 footer .footer-col.logo {
   font-weight: bold;
   font-size: 1.2em;

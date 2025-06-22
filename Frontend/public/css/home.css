@@ -102,6 +102,11 @@ header .cta-buttons a.signup {
   width: 32rem;
   line-height: 1.7;
 }
+.sketch-img{
+  margin-top: 27px;
+    position: relative;
+    right: 3%;
+}
 .hero-main .btn {
   background-color: var(--box-jump-blue);
   color: var(--white);
@@ -345,6 +350,7 @@ header .cta-buttons a.signup {
 .value-proposition-section {
   text-align: center;
   padding: 60px 0;
+  position: relative;
 }
 .value-proposition-section h2 {
   color: var(--nourish-navy);
@@ -370,7 +376,15 @@ header .cta-buttons a.signup {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 90px;
+  /* margin-top: 90px; */
+  margin: auto;
+  margin-top: 100px;
+  width: 80%;
+}
+
+.customize-img {
+  position: absolute;
+  width: fit-content;
 }
 
 .special-feature {
@@ -378,7 +392,8 @@ header .cta-buttons a.signup {
   flex-direction: column;
   margin: 20px;
   width: 300px;
-  height: 450px;
+  /* height: 450px; */
+  height: 421px;
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -666,7 +681,8 @@ header .cta-buttons a.signup {
   height: 100%; */
   /* width: 200px;
   height: 200px; */
-  box-shadow: 5px 5px 13px #000000;
+  /* box-shadow: 5px 5px 13px #000000; */
+  box-shadow: 5px 5px 9px #0000003b;
   width: 500px;
   height: 281px;
   object-fit: cover; /* Ensure images fit nicely */
