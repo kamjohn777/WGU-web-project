@@ -50,6 +50,7 @@ header .cta-buttons a.signup {
   display: flex;
   justify-content: space-between;
   height: 530px;
+  margin-top: 57px;
 }
 .hero-about .text-content {
   width: 45%;
@@ -423,10 +424,20 @@ header .cta-buttons a.signup {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; */
+  display: flex;
+  align-items: center;
   width: 511px;
   height: 290px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.jordan-quote {
+    width: 16rem;
+    margin: auto;
+}
+.chrissy-quote {
+    width: 16rem;
+    margin: auto;
 }
 .profile-bg.jordan,
 .profile-bg.chrissy {
@@ -458,12 +469,12 @@ header .cta-buttons a.signup {
   margin-bottom: 10px;
   font-size: 1.2em;
 }
-.article-block.side p {
+/* .article-block.side p {
   font-size: 0.9em;
   color: #555;
   line-height: 1.6;
   margin-bottom: 20px;
-}
+} */
 .article-block.side .read-more {
   text-decoration: none;
   color: #007bff;
