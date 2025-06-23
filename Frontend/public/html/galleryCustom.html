@@ -3,271 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/galleryCustom.css">
     <title></title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background-color: #fff;
-            border-bottom: 1px solid #eee;
-        }
-        header .logo {
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #333;
-        }
-        header nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #777;
-        }
-        header .cta-buttons a {
-            margin-left: 10px;
-            padding: 8px 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            text-decoration: none;
-            color: #333;
-        }
-        header .cta-buttons a.signup {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .hero-main {
-            text-align: center;
-            padding: 80px 0;
-            background-color: #fff;
-        }
-        .hero-main h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .hero-main p {
-            font-size: 1.1em;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hero-main .btn {
-            background-color: #000;
-            color: #fff;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 4px;
-            display: inline-block;
-        }
-        .image-testimonial-section {
-            padding: 40px 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 40px;
-        }
-        .image-testimonial-section .image-placeholder {
-            width: 50%;
-            background-color: #eee;
-            border: 1px solid #ddd;
-            min-height: 300px;
-        }
-        .image-testimonial-section .testimonial-content {
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .image-testimonial-section .testimonial-content p {
-            font-size: 1.2em;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        .image-testimonial-section .author-info {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .image-testimonial-section .author-title {
-            font-size: 0.9em;
-            color: #777;
-        }
-
-
-        .trusted-companies {
-            text-align: center;
-            padding: 60px 0;
-            background-color: #f8f8f8;
-        }
-        .trusted-companies h2 {
-            font-size: 1.2em;
-            color: #777;
-            margin-bottom: 30px;
-        }
-        .company-logos {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-        }
-        .company-logo-placeholder {
-            width: 70px;
-            height: 70px;
-            background-color: #000; /* Black circle placeholder */
-            border-radius: 50%;
-        }
-
-        .value-proposition-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 80px 0;
-            background-color: #fff;
-        }
-        .value-proposition-section .text-content {
-            width: 45%;
-            padding-right: 20px;
-        }
-        .value-proposition-section .text-content h2 {
-            font-size: 2.2em;
-            margin-bottom: 15px;
-        }
-        .value-proposition-section .text-content p {
-            font-size: 1.1em;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .value-proposition-section .image-placeholder {
-            width: 50%;
-            background-color: #000; /* Black box */
-            min-height: 300px;
-        }
-
-        .cta-footer-section {
-            text-align: center;
-            padding: 80px 0;
-            background-color: #fff;
-            margin-top: 40px;
-        }
-        .cta-footer-section h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-        .cta-footer-section p {
-            color: #777;
-            margin-bottom: 40px;
-        }
-        .cta-footer-section .btn {
-            background-color: #000;
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 1.1em;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        footer .footer-col {
-            width: 22%;
-            margin-bottom: 20px;
-        }
-        footer .footer-col.logo {
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        footer .footer-col h4 {
-            margin-bottom: 15px;
-            font-size: 1.1em;
-            color: #fff;
-        }
-        footer .footer-col ul {
-            list-style: none;
-            padding: 0;
-        }
-        footer .footer-col ul li {
-            margin-bottom: 10px;
-        }
-        footer .footer-col ul li a {
-            text-decoration: none;
-            color: #ccc;
-        }
-        footer .footer-col p {
-            font-size: 0.9em;
-            color: #ccc;
-            line-height: 1.6;
-        }
-        footer .copyright {
-            width: 100%;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.8em;
-            color: #aaa;
-        }
-        footer .ready-to-get-started {
-            width: 40%;
-            background-color: #333; /* Same as footer background */
-            padding: 0px; /* Adjust padding as needed */
-            color: #fff;
-        }
-        footer .ready-to-get-started h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        footer .ready-to-get-started p {
-            font-size: 0.9em;
-            color: #ccc;
-            margin-bottom: 20px;
-        }
-        footer .ready-to-get-started .btn {
-            background-color: #000;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-    </style>
 </head>
 <body>
-
-    <!-- <header>
-        <div class="logo">TRADE</div>
-        <nav>
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
-        </nav>
-        <div class="cta-buttons">
-            <a href="#">API</a>
-            <a href="#">Help</a>
-            <a href="#">Login</a>
-            <a href="#" class="signup">Sign Up</a>
-        </div>
-    </header> -->
-
-    <!-- <div id="header-placeholder"></div> -->
-
     <div class="hero-main">
         <h1>Your Best Value Proposition</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -305,48 +44,64 @@
     </div>
 
     <div class="cta-footer-section">
-        <h2>Ready to get started?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href="#" class="btn">Start Free Trial</a>
+        <section class="container bottom-value-prop">
+            <div class="text-content">
+              <h2>Your <strong>Best</strong> Value Proposition</h2>
+              <p>
+                From strength to stillness—we’ve got your fitness covered. Explore a
+                wide range of expert-led classes including
+                <span class="span-phrase"
+                  >Yoga, Kickboxing, Pilates, HIIT, Strength Training, and
+                  Mobility.</span
+                >
+                Whether you’re looking to sweat it out solo or find your flow, our
+                <span>personalized</span> programs make it easy to
+                <span>stay consistent, challenged,</span> and <span>inspired.</span>
+              </p>
+              <em
+                >“Being able to mix things up between kickboxing and yoga keeps me
+                motivated week after week. The variety and expert instruction are
+                unmatched.”</em
+              >
+              <em>— Johnson Kameron, Product Designer</em>
+            </div>
+            <div class="image-block">
+              <div class="carousel">
+                <img
+                  id="image1"
+                  src="../../assets/images/Client2_GroupKickboxing.png"
+                  alt="Image1"
+                />
+                <img
+                  id="image2"
+                  src="../../assets/images/Client2_GroupPilates.png"
+                  alt="Image"
+                />
+                <img
+                  id="image3"
+                  src="../../assets/images/Client2_GroupYoga.png"
+                  alt="Image3"
+                />
+                <img
+                  id="image4"
+                  src="../../assets/images/Client2_IndividualPilates.png"
+                  alt="Image3"
+                />
+                <img
+                  id="image5"
+                  src="../../assets/images/Client2_IndividualYoga.png"
+                  alt="Image3"
+                />
+                <img
+                  id="image6"
+                  src="../../assets/images/Client2_IndividualKickboxing.png"
+                  alt="Image3"
+                />
+              </div>
+            </div>
+          </section>      
     </div>
-
-    <footer>
-        <div class="footer-col ready-to-get-started">
-            <div class="logo">TRADE</div>
-            <h3>Ready to get started?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquo ex ea commodo consequat.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Product</h4>
-            <ul>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Product</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Company</h4>
-            <ul>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Company</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Company</h4>
-            <ul>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Company</a></li>
-            </ul>
-        </div>
-        <div class="copyright">
-            © 2010 - 2020 - Privacy - Terms
-        </div>
-    </footer>
     <script src="../javaScript/header.js"></script>
+    <script src="../javaScript/footer.js"></script>
 </body>
 </html>
