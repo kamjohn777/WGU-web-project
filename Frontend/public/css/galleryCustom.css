@@ -175,7 +175,8 @@ header .cta-buttons a.signup {
 /*  */
 .container.bottom-value-prop {
   background: linear-gradient(to right, #007bff4d, #ffffff);
-  height: 34rem;
+  /* height: 34rem; */
+  height: 39.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,6 +185,7 @@ header .cta-buttons a.signup {
 .text-content {
   text-align: left;
   width: 30rem;
+  margin-left: 5rem;
 }
 
 .text-content h2 {
