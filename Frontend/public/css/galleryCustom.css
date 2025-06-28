@@ -4,11 +4,6 @@ body {
   background-color: #ffffff;
   color: #333;
 }
-/* .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-} */
 header {
   display: flex;
   justify-content: space-between;
@@ -50,12 +45,12 @@ header .cta-buttons a.signup {
   color: var(--box-jump-blue);
 }
 .hero-main h1 {
-    font-size: 4.5em;
-    margin-bottom: 20px;
-    width: 58rem;
-    margin: auto;
-    color: var(--nourish-navy);
-    font-weight: 700;
+  font-size: 4.5em;
+  margin-bottom: 20px;
+  width: 58rem;
+  margin: auto;
+  color: var(--nourish-navy);
+  font-weight: 700;
 }
 .hero-main p {
   font-size: 1.4em;
@@ -68,9 +63,9 @@ header .cta-buttons a.signup {
   margin-right: auto;
 }
 .hero-main img {
-    position: absolute;
-    top: 20%;
-    left: 80%;
+  position: absolute;
+  top: 20%;
+  left: 80%;
 }
 
 .image-testimonial-section {
@@ -107,33 +102,27 @@ header .cta-buttons a.signup {
 }
 
 .div-cir-1 .circle {
-  /* width: 30px;
-  height: 30px; */
   width: 20px;
   height: 20px;
 }
 
 .div-cir-2 .circle {
-  /* width: 35px;
-  height: 35px; */
   width: 25px;
   height: 25px;
 }
 
 .div-cir-3 .circle {
-  /* width: 40px;
-  height: 40px; */
   width: 30px;
   height: 30px;
 }
 
 .circle {
-  width: 50px; /* Adjust size */
-  height: 50px; /* Adjust size */
-  background-color: #155ebc; /* Adjust color */
-  border-radius: 50%; /* Makes it a circle */
-  margin: 5px; /* Adds spacing */
-  display: inline-block; /* Ensures circles are inline */
+  width: 50px;
+  height: 50px;
+  background-color: #155ebc;
+  border-radius: 50%;
+  margin: 5px;
+  display: inline-block;
 }
 
 .image-testimonial-section .image-placeholder {
@@ -203,7 +192,7 @@ header .cta-buttons a.signup {
 .company-logo-placeholder {
   width: 70px;
   height: 70px;
-  background-color: #000; /* Black circle placeholder */
+  background-color: #000;
   border-radius: 50%;
 }
 
@@ -230,37 +219,13 @@ header .cta-buttons a.signup {
 }
 .value-proposition-section .image-placeholder {
   width: 50%;
-  background-color: #000; /* Black box */
+  background-color: #000;
   min-height: 300px;
 }
-
-/* .cta-footer-section {
-    text-align: center;
-    padding: 80px 0;
-    background-color: #fff;
-    margin-top: 40px;
-} */
-/* .cta-footer-section h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-} */
-/* .cta-footer-section p {
-    color: #777;
-    margin-bottom: 40px;
-}
-.cta-footer-section .btn {
-    background-color: #000;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 1.1em;
-} */
 
 /*  */
 .container.bottom-value-prop {
   background: linear-gradient(to bottom, #007bff4d, #ffffff);
-  /* height: 34rem; */
   height: 39.5rem;
   display: flex;
   align-items: center;
@@ -377,7 +342,6 @@ header .cta-buttons a.signup {
 }
 /* Infinite-loop */
 .infinite-logoloop-animation {
-  /* border: 1px solid black; */
   width: 90%;
   max-width: 1536px;
   margin-inline: auto;
@@ -404,11 +368,8 @@ header .cta-buttons a.signup {
 }
 
 .looping-item {
-  /* height: 170px;
-    width: 170px; */
   height: 142px;
   width: 142px;
-  /* background-color: rebeccapurple; */
   border-radius: 6px;
   position: absolute;
   left: max(calc(200px * 8), 100%);
