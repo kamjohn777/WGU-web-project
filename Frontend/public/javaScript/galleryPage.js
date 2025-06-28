@@ -41,4 +41,24 @@ document.addEventListener("DOMContentLoaded", function () {
       // Append the item to the parent container
       infiniteLoopContainer.appendChild(loopItem);
     }
-  });
+
+    // Circle contianer logic
+    const circleContainers = document.querySelectorAll(".div-circle-container > div");
+
+    const totalCircles = 20;
+
+    circleContainers.forEach(container => {
+        for (let i = 0; i < totalCircles; i++) {
+            const circleDiv = document.createElement("div");
+            circleDiv.classList.add("circle");
+
+            const centerIndex = Math.floor(totalCircles / 2);
+            const distanceFromCenter = Math.abs(i - centerIndex);
+            const opacity = 1 - (distanceFromCenter / centerIndex);
+
+            circleDiv.style.opacity = opacity;
+
+            container.appendChild(circleDiv);
+        }
+    })
+});
