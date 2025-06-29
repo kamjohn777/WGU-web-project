@@ -10,9 +10,10 @@
 <body>
     <div class="container hero-shopping-page">
         <div class="text-content">
-            <!-- <h1>Shopping Cart<br>Your Best Value<br>Proposition</h1>
+            <h1>Shopping Cart
+                Your Best <span> Value </span>Proposition</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="btn">Start Free Trial</a> -->
+            <a href="#" class="trial-btn">Start Free Trial</a>
         </div>
         <!-- <div class="product-display">
             <div class="product-image-placeholder"></div>
@@ -26,10 +27,21 @@
         <div class="bg-img-fade1"></div>
         <div class="bg-img-fade2"></div>
         <!-- <div class="bg-img-fade3"></div> -->
+         <div class="banner-img"><img src="../../assets/images/ShoppingPage-assets/Gemini_Generated_Image_jd1bkpjd1bkpjd1b-removebg-preview.png" alt=""></div>
     </div>
 
-    <div class="pricing-section">
-        <h2>Transparent Pricing</h2>
+    <section class="offers-card-section">
+        <div class="cards-parent-container swiper">
+            <div class="swiper-wrapper">
+                <!-- Cards will be dynamically added here -->
+            </div>
+            <!-- Swiper navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Swiper pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- <h2>Transparent Pricing</h2>
         <p>You can adjust the features and seats to fit your needs, whatever your budget.</p>
         <div class="pricing-cards">
             <div class="pricing-card">
@@ -60,8 +72,8 @@
                 <div class="price">$120</div>
                 <a href="#" class="btn">Buy Now</a>
             </div>
-        </div>
-    </div>
+        </div> -->
+    </section>
 
     <div class="cta-section">
         <h2>Ready to get started?</h2>
@@ -107,5 +119,11 @@
         </div>
     </footer>
     <script src="../javaScript/header.js"></script>
+    <script src="../javaScript/shoppingGallery.js"></script>
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>

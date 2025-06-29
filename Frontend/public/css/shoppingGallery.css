@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     color: #333;
 }
 .container {
@@ -56,21 +56,34 @@ header .cta-buttons a.signup {
 .hero-shopping-page .text-content {
     width: 45%;
     padding-right: 20px;
+    z-index: 1000;
+    display: flex
+;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 170px;
+    margin-top: 57px;
+
+}
+.hero-shopping-page .text-content span {
+    color: var(--box-jump-blue);
 }
 .hero-shopping-page .text-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
+    font-size: 3em;
+    width: 28rem;
+    margin-bottom: 0;
 }
 .hero-shopping-page .text-content p {
     font-size: 1.1em;
+    width: 20rem;
     color: #555;
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
-.hero-shopping-page .text-content .btn {
-    background-color: #000;
+.hero-shopping-page .text-content .trial-btn {
+    background-color: var(--box-jump-blue);
     color: #fff;
-    padding: 12px 25px;
+    padding: 18px 25px;
     text-decoration: none;
     border-radius: 4px;
 }
@@ -125,7 +138,8 @@ header .cta-buttons a.signup {
     left: 3%; */
 
     width: 56rem;
-    height: 912px;
+    height: 1064px;
+    /* height: 912px; */
     opacity: 10%;
     position: absolute;
     /* left: 43%;
@@ -161,6 +175,18 @@ header .cta-buttons a.signup {
     transform: rotate(111deg); */
 }
 
+.banner-img {
+    z-index: 1000;
+    position: absolute;
+    left: 38%;
+    top: -14%;
+    height: 100%;
+    width: 100%;
+}
+
+.banner-img img {
+height: 777px;}
+
 /* .bg-img-fade3 {
     background-image: url(../../assets/images/ShoppingPage-assets/hero-banner/ChatGPT_Image_Jun_13__2025__09_49_18_AM-removebg-preview.png);
     background-position: center;
@@ -174,7 +200,7 @@ header .cta-buttons a.signup {
 
 .container.hero-shopping-page {
     position: relative; /* Ensure child elements are positioned relative to this container */
-    width: 100%; /* Adjust width as needed */
+    width: 95%;
     /* height: 100%; */
     overflow: hidden; /* Crop child elements to the parent container */
 }
@@ -193,7 +219,7 @@ header .cta-buttons a.signup {
     opacity: 0.1; 
 } */
 
-.pricing-section {
+/* .pricing-section {
     text-align: center;
     padding: 60px 0;
     background-color: #f8f8f8;
@@ -252,13 +278,44 @@ header .cta-buttons a.signup {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 4px;
-    margin-top: auto; /* Pushes button to bottom */
+    margin-top: auto;
 }
 .pricing-card .btn.outline {
     background-color: #fff;
     color: #333;
     border: 1px solid #ccc;
-}
+} */
+
+.cards-parent-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .swiper-wrapper {
+    display: flex;
+  }
+  
+  .card {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .card h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+  }
 
 .cta-section {
     text-align: center;
