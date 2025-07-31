@@ -59,4 +59,30 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       loop: true, // Infinite loop
     });
+
+
+    const parentProductCardSec = document.querySelector(".product-cards-section");
+
+    let totalCards = 10;
+
+    const cardsContainer = document.createElement("div");
+    cardsContainer.classList.add("cards-container");
+
+    for (let i = 0; i < totalCards; i++) {
+        const cardDiv = document.createElement("div");
+        cardDiv.classList.add("card");
+        
+        const imgElement = document.createElement("img");
+        imgElement.src = "../../assets/images/ShoppingPage-assets/ShoppingPageicon1.png"; // Placeholder image
+
+        const titleElement = document.createElement("h3");
+        titleElement.textContent = `Product ${i + 1}`; // Dynamic title
+
+        cardDiv.appendChild(imgElement);
+        cardDiv.appendChild(titleElement);
+
+        cardsContainer.appendChild(cardDiv);
+    }
+
+    parentProductCardSec.appendChild(cardsContainer);
   });
