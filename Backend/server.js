@@ -1,13 +1,21 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
+const productsRoute =  require('./api/product');
+
+
 const app = express();
 const PORT = 4000;
 
-const cors = require('cors');
+
 app.use(cors());
 
 app.use(express.static(path.join(__dirname, '../Frontend/public')));
+
+// app.use('./routes/product.js', productsRoute);
+app.use('/api/products', productsRoute);
+// app.use('/api/products', productsRoute);
 
 app.get('/', (req, res) => {
     app.use(express.static(path.join(__dirname, '../Frontend/public')));

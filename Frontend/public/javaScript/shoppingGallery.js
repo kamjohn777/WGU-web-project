@@ -1,54 +1,85 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Select the Swiper wrapper
-    const swiperWrapper = document.querySelector(".swiper-wrapper");
-  
-    // Array of icons and titles
-    const icons = [
-      { image: "../../assets/images/ShoppingPage-assets/ShoppingPageicon1.png", title: "Icon 1" },
-      { image: "../../assets/images/ShoppingPage-assets/ShoppingPageicon2.png", title: "Icon 2" },
-      { image: "../../assets/images/ShoppingPage-assets/ShoppingPageicon3.png", title: "Icon 3" },
-      { image: "../../assets/images/ShoppingPage-assets/ShoppingPageicon4.png", title: "Icon 4" },
-      { image: "../../assets/images/ShoppingPage-assets/ShoppingPageicon5.png", title: "Icon 5" },
-      { image: "../../assets/images/ShoppingPage-assets/ShoppingPageicon6.png", title: "Icon 6" },
-      { image: "../../assets/images/ShoppingPage-assets/ShoppingPageicon7.png", title: "Icon 7" },
-      { image: "../../assets/images/ShoppingPage-assets/ShoppingPageicon8.png", title: "Icon 8" },
-      { image: "../../assets/images/ShoppingPage-assets/ShoppingPageicon9.png", title: "Icon 9" },
-    ];
-  
-    // Loop through the icons array and create Swiper slides
-    icons.forEach(icon => {
-      // Create a Swiper slide div
-      const slideDiv = document.createElement("div");
-      slideDiv.classList.add("swiper-slide");
-  
-      // Create a container div for the card
+document.addEventListener("DOMContentLoaded", async function () {
+  try {
+    // Fetch product data from the backend
+    const response = await fetch("http://localhost:4000/api/products");
+    const products = await response.json();
+
+    // Select the product cards section
+    const parentProductCardSec = document.querySelector(".product-cards-section");
+
+    // Create a container div for the product cards
+    const cardsContainer = document.createElement("div");
+    cardsContainer.classList.add("cards-container");
+
+    // Loop through the products and create cards
+    products.slice(0, 10).forEach(product => {
       const cardDiv = document.createElement("div");
       cardDiv.classList.add("card");
-  
+
       // Create an image element
       const imgElement = document.createElement("img");
-      imgElement.src = icon.image;
-      imgElement.alt = icon.title;
-  
+      imgElement.src = product.image; // Use product image
+      imgElement.alt = product.title;
+
       // Create a title element
       const titleElement = document.createElement("h3");
-      titleElement.textContent = icon.title;
-  
-      // Append the image and title to the card div
+      titleElement.textContent = product.title; // Use product title
+
+      // Create a price element
+      const priceElement = document.createElement("p");
+      priceElement.textContent = `$${product.price}`; // Display product price
+
+      // Create a button element
+      const buttonElement = document.createElement("button");
+      buttonElement.classList.add("add-to-cart-button");
+      buttonElement.textContent = "Add to Cart";
+
+      // Append the image, title, price, and button to the card div
       cardDiv.appendChild(imgElement);
       cardDiv.appendChild(titleElement);
-  
-      // Append the card div to the slide div
+      cardDiv.appendChild(priceElement);
+      cardDiv.appendChild(buttonElement);
+
+      // Append the card div to the cards container
+      cardsContainer.appendChild(cardDiv);
+    });
+
+    // Append the cards container to the product cards section
+    parentProductCardSec.appendChild(cardsContainer);
+
+    // Filter products related to fitness
+    const fitnessProducts = products.filter(product =>
+      product.category.toLowerCase().includes("fitness") || // Check category
+      product.title.toLowerCase().includes("fitness") || // Check title
+      product.description.toLowerCase().includes("fitness") // Check description
+    );
+
+    // Populate Swiper slides
+    const swiperWrapper = document.querySelector(".swiper-wrapper");
+    fitnessProducts.slice(0, 9).forEach(product => {
+      const slideDiv = document.createElement("div");
+      slideDiv.classList.add("swiper-slide");
+
+      const cardDiv = document.createElement("div");
+      cardDiv.classList.add("card");
+
+      const imgElement = document.createElement("img");
+      imgElement.src = product.image;
+      imgElement.alt = product.title;
+
+      const titleElement = document.createElement("h3");
+      titleElement.textContent = product.title;
+
+      cardDiv.appendChild(imgElement);
+      cardDiv.appendChild(titleElement);
       slideDiv.appendChild(cardDiv);
-  
-      // Append the slide div to the Swiper wrapper
       swiperWrapper.appendChild(slideDiv);
     });
-  
+
     // Initialize Swiper
     const swiper = new Swiper(".swiper", {
-      slidesPerView: 3, // Number of cards visible at once
-      spaceBetween: 20, // Space between cards
+      slidesPerView: 3,
+      spaceBetween: 20,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -57,32 +88,9 @@ document.addEventListener("DOMContentLoaded", function () {
         el: ".swiper-pagination",
         clickable: true,
       },
-      loop: true, // Infinite loop
+      loop: true,
     });
-
-
-    const parentProductCardSec = document.querySelector(".product-cards-section");
-
-    let totalCards = 10;
-
-    const cardsContainer = document.createElement("div");
-    cardsContainer.classList.add("cards-container");
-
-    for (let i = 0; i < totalCards; i++) {
-        const cardDiv = document.createElement("div");
-        cardDiv.classList.add("card");
-        
-        const imgElement = document.createElement("img");
-        imgElement.src = "../../assets/images/ShoppingPage-assets/ShoppingPageicon1.png"; // Placeholder image
-
-        const titleElement = document.createElement("h3");
-        titleElement.textContent = `Product ${i + 1}`; // Dynamic title
-
-        cardDiv.appendChild(imgElement);
-        cardDiv.appendChild(titleElement);
-
-        cardsContainer.appendChild(cardDiv);
-    }
-
-    parentProductCardSec.appendChild(cardsContainer);
-  });
+  } catch (error) {
+    console.error("Error fetching products:", error);
+  }
+});
