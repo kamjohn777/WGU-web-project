@@ -42,6 +42,10 @@ app.get('/shopping', (req, res) => {
     res.sendFile(path.join(__dirname, '../Frontend/public/html/shoppingGallery.html'));
 })
 
+app.get('/cartPage', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Frontend/public/html/cartPage.html'));
+})
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 })

@@ -1,6 +1,3 @@
-// const mainBlock = document.getElementsByClassName(".content-block.main");
-// const sideBlock = document.getElementsByClassName(".content-block.side");
-
 document.addEventListener("DOMContentLoaded", function () {
   const dealsImageArray = [
     {
@@ -77,9 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
   sideBlock.style.backgroundSize = "cover";
   sideBlock.style.backgroundRepeat = "no-repeat";
   sideBlock.style.boxshadow = "3px 3px 4px #00000057";
-  //   function displayDeal(deal) {
-
-  //   }
 
   let currentDealIndex = 0;
 
@@ -155,5 +149,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Append the main feature container to the special features wrap
     specialFeatureContainer.appendChild(featureDiv);
+  });
+
+  // Add alert for "Contact Us" button
+  const contactForm = document.querySelector(".contact-div form");
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+    alert("Thank you for your message. We will get back to you soon!");
   });
 });

@@ -11,6 +11,14 @@ document.addEventListener("DOMContentLoaded", async function () {
     const cardsContainer = document.createElement("div");
     cardsContainer.classList.add("cards-container");
 
+    // Initialize cart from localStorage or create an empty array
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Function to save cart to localStorage
+    const saveCartToLocalStorage = () => {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    };
+
     // Loop through the products and create cards
     products.slice(0, 10).forEach(product => {
       const cardDiv = document.createElement("div");
@@ -34,6 +42,19 @@ document.addEventListener("DOMContentLoaded", async function () {
       buttonElement.classList.add("add-to-cart-button");
       buttonElement.textContent = "Add to Cart";
 
+      // Add event listener for "Add to Cart" button
+      buttonElement.addEventListener("click", () => {
+        // Check if the product is already in the cart
+        const existingProduct = cart.find(item => item.id === product.id);
+        if (!existingProduct) {
+          cart.push(product); // Add product to cart
+          saveCartToLocalStorage(); // Save updated cart to localStorage
+          alert("Item added to the cart");
+        } else {
+          alert("Item is already in the cart");
+        }
+      });
+
       // Append the image, title, price, and button to the card div
       cardDiv.appendChild(imgElement);
       cardDiv.appendChild(titleElement);
@@ -47,50 +68,35 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Append the cards container to the product cards section
     parentProductCardSec.appendChild(cardsContainer);
 
-    // Filter products related to fitness
-    const fitnessProducts = products.filter(product =>
-      product.category.toLowerCase().includes("fitness") || // Check category
-      product.title.toLowerCase().includes("fitness") || // Check title
-      product.description.toLowerCase().includes("fitness") // Check description
-    );
 
-    // Populate Swiper slides
-    const swiperWrapper = document.querySelector(".swiper-wrapper");
-    fitnessProducts.slice(0, 9).forEach(product => {
-      const slideDiv = document.createElement("div");
-      slideDiv.classList.add("swiper-slide");
+    // Append the cards container to the product cards section
+parentProductCardSec.appendChild(cardsContainer);
 
-      const cardDiv = document.createElement("div");
-      cardDiv.classList.add("card");
 
-      const imgElement = document.createElement("img");
-      imgElement.src = product.image;
-      imgElement.alt = product.title;
+// Add "Order Item" functionality
+const orderButton = document.createElement("button");
+orderButton.textContent = "Order Items";
+orderButton.classList.add("order-button");
+orderButton.addEventListener("click", () => {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  if (cart.length > 0) {
+    alert("Thank you for your order!");
+    localStorage.removeItem("cart"); // Clear the cart after ordering
+  } else {
+    alert("Your cart is empty. Please add items to the cart before ordering.");
+  }
+});
+parentProductCardSec.appendChild(orderButton);
 
-      const titleElement = document.createElement("h3");
-      titleElement.textContent = product.title;
-
-      cardDiv.appendChild(imgElement);
-      cardDiv.appendChild(titleElement);
-      slideDiv.appendChild(cardDiv);
-      swiperWrapper.appendChild(slideDiv);
-    });
-
-    // Initialize Swiper
-    const swiper = new Swiper(".swiper", {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      loop: true,
-    });
+    // Add "Subscribe" alert functionality
+    const subscribeButton = document.querySelector(".trial-btn");
+    if (subscribeButton) {
+      subscribeButton.addEventListener("click", () => {
+        alert("Thank you for subscribing.");
+      });
+    }
   } catch (error) {
     console.error("Error fetching products:", error);
   }
+
 });
