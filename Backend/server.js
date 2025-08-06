@@ -43,6 +43,7 @@ app.get('/shopping', (req, res) => {
 })
 
 app.get('/cartPage', (req, res) => {
+    app.use(express.static(path.join(__dirname, '../Frontend/public')));
     res.sendFile(path.join(__dirname, '../Frontend/public/html/cartPage.html'));
 })
 

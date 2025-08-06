@@ -1,0 +1,20 @@
+/* body { background: red !important; } */
+.cart-parent-container {
+    width: 100%;
+    max-width: 1900px;
+    max-height: 100vh;
+}
+
+.items-display {
+ width: 60%;
+ background-color: #ffffff;
+ box-shadow: 2px 2px 2px black;
+ border-radius: 10px;
+} 
+
+.total-display {
+    width: 40%;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+}
