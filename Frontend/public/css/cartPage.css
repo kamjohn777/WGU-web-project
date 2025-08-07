@@ -34,3 +34,10 @@
     border-radius: 10px;
     border: #0000001b 1px solid;
 }
+
+header .cta-buttons a {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+}

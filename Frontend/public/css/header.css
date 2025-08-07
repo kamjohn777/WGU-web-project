@@ -1,4 +1,4 @@
-@import url(../css/variables.css);
+@import url(./variables.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap");
 
@@ -24,7 +24,7 @@
 header .header-logo-link-wrap  nav a {
     margin-left: 20px;
     text-decoration: none;
-    color: var(nourish-navy);
+    color: var(--nourish-navy);
 }
 
 .header-logo-link-wrap {
@@ -65,5 +65,5 @@ header .cta-buttons a.signup{
 }
 
 .material-symbols-outlined {
-  color: var(noursish-navy);
+  color: var(--nourish-navy);
 }
