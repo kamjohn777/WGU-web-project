@@ -1,20 +1,36 @@
 /* body { background: red !important; } */
+@import url(./variables.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap");
+.cart-h1 {
+    margin-left: 4.5rem;
+    color: var(--box-jump-blue);
+    font-family: "roboto", sans-serif;
+}
+
 .cart-parent-container {
-    width: 100%;
+    width: 90%;
     max-width: 1900px;
     max-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
 }
 
 .items-display {
- width: 60%;
+ width: 55%;
+ height: 30rem;
  background-color: #ffffff;
- box-shadow: 2px 2px 2px black;
+ box-shadow: 5px 6px 8px #00000063;
  border-radius: 10px;
+ border: #0000001b 1px solid;
 } 
 
 .total-display {
     width: 40%;
+    height: 30rem;
     background-color: #ffffff;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 5px 6px 8px #00000063;
     border-radius: 10px;
+    border: #0000001b 1px solid;
 }
