@@ -10,15 +10,27 @@
 </head>
 <body>
     <h1 class="cart-h1">Your Shopping Cart</h1>
-
     <div class="cart-parent-container">
         <div class="items-display">
+            <!-- Cart items will be injected here -->
         </div>
-
         <div class="total-display">
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-details">
+                    <div class="summary-row"><span>Subtotal</span><span id="subtotal">$0</span></div>
+                    <div class="summary-row"><span>Discount (-20%)</span><span id="discount">-$0</span></div>
+                    <div class="summary-row"><span>Delivery Fee</span><span id="delivery">$15</span></div>
+                    <div class="summary-row total"><span>Total</span><span id="total">$0</span></div>
+                </div>
+                <div class="promo-row">
+                    <input type="text" placeholder="Promo Code Here" id="promo-input">
+                    <button id="apply-promo">Apply Now</button>
+                </div>
+                <button class="checkout-btn">Checkout Now</button>
+            </div>
         </div>
     </div>
-
     <script src="../javaScript/header.js"></script>
     <script src="../javaScript/cartPage.js"></script>
 </body>
