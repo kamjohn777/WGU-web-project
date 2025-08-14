@@ -265,7 +265,61 @@
           </div>
      </div>
     </section>
-    <script src="../javaScript/header.js"></script>
-    <script src="../javaScript/footer.js"></script>
+    <div class="customer-info-section">
+  <div class="form-flex-wrap">
+    <h2>Contact / Custom Order Form</h2>
+    <form id="customer-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" required />
+
+      <label for="feedback">Feedback / Custom Order:</label>
+      <textarea id="feedback" required></textarea>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" required />
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+ 
+</div>
+<script src="../javaScript/header.js"></script>
+<script src="../javaScript/footer.js"></script>
+<script src="../javaScript/aboutPage.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Example keys: "customerInfo" and "feedbackInfo"
+  const customerInfo = JSON.parse(localStorage.getItem("customerInfo"));
+  const feedbackInfo = JSON.parse(localStorage.getItem("feedbackInfo"));
+
+  const customerDiv = document.getElementById("customer-info");
+  const feedbackDiv = document.getElementById("feedback-info");
+
+  if (customerInfo) {
+    customerDiv.innerHTML = `
+      <p><strong>Name:</strong> ${customerInfo.name}</p>
+      <p><strong>Email:</strong> ${customerInfo.email}</p>
+      <p><strong>Phone:</strong> ${customerInfo.phone}</p>
+    `;
+  } else {
+    customerDiv.textContent = "No customer information found.";
+  }
+
+  if (feedbackInfo) {
+    feedbackDiv.innerHTML = `
+      <p><strong>Order Type:</strong> ${feedbackInfo.orderType}</p>
+      <p><strong>Feedback:</strong> ${feedbackInfo.feedback}</p>
+    `;
+  } else {
+    feedbackDiv.textContent = "No feedback or custom order information found.";
+  }
+});
+</script>
   </body>
 </html>
