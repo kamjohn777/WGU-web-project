@@ -1,127 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/shoppingGallery.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/shoppingGallery.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
     <title>Shopping Cart - Trade</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="container hero-shopping-page">
-        <div class="text-content">
-            <h1>Shopping Cart
-                Your Best <span> Value </span>Proposition</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="trial-btn">Start Free Trial</a>
-        </div>
-        <!-- <div class="product-display">
-            <div class="product-image-placeholder"></div>
-            <div class="product-details">
-                <h3>Product Name</h3>
-                <p>Lorem ipsum dolor sit amet...</p>
-                <p>$120.00</p>
-                <a href="#" class="btn outline">Add to Cart</a>
-            </div>
-        </div> -->
-        <div class="bg-img-fade1"></div>
-        <div class="bg-img-fade2"></div>
-        <!-- <div class="bg-img-fade3"></div> -->
-         <div class="banner-img"><img src="../../assets/images/ShoppingPage-assets/Gemini_Generated_Image_jd1bkpjd1bkpjd1b-removebg-preview.png" alt=""></div>
+      <div class="text-content">
+        <h1>Shopping Cart Your Best <span> Value </span>Proposition</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <a href="#" class="trial-btn">Start Free Trial</a>
+      </div>
+      
+      <div class="bg-img-fade1"></div>
+      <div class="bg-img-fade2"></div>
+      <div class="banner-img">
+        <img
+          src="../../assets/images/ShoppingPage-assets/Gemini_Generated_Image_jd1bkpjd1bkpjd1b-removebg-preview.png"
+          alt=""
+        />
+      </div>
     </div>
 
     <section class="offers-card-section">
-        <div class="cards-parent-container swiper">
-            <div class="swiper-wrapper">
-                <!-- Cards will be dynamically added here -->
-            </div>
-            <!-- Swiper navigation buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- Swiper pagination -->
-            <div class="swiper-pagination"></div>
+      <div class="cards-parent-container swiper">
+        <div class="swiper-wrapper">
+          <!-- Cards will be dynamically added here -->
         </div>
-        <!-- <h2>Transparent Pricing</h2>
-        <p>You can adjust the features and seats to fit your needs, whatever your budget.</p>
-        <div class="pricing-cards">
-            <div class="pricing-card">
-                <div class="icon-placeholder"></div>
-                <h3>Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                <div class="price">$120</div>
-                <a href="#" class="btn">Buy Now</a>
-            </div>
-            <div class="pricing-card">
-                <div class="icon-placeholder"></div>
-                <h3>Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                <div class="price">$120</div>
-                <a href="#" class="btn">Buy Now</a>
-            </div>
-            <div class="pricing-card">
-                <div class="icon-placeholder"></div>
-                <h3>Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                <div class="price">$120</div>
-                <a href="#" class="btn outline">Add to Cart</a>
-            </div>
-            <div class="pricing-card">
-                <div class="icon-placeholder"></div>
-                <h3>Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                <div class="price">$120</div>
-                <a href="#" class="btn">Buy Now</a>
-            </div>
-        </div> -->
+        <!-- Swiper navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Swiper pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
 
-    <section class="product-cards-section">
-        
-    </section>
+    <!-- This has the dynamic generated cards coming from the shoppingGallery.js file -->
+    <section class="product-cards-section"></section>
 
-    <footer>
-        <div class="footer-col ready-to-get-started">
-            <h3>Ready to get started?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="btn">Learn More</a>
+    <section class="sg-product-cards-section">
+    <!-- Featured Store -->
+    <div class="sg-featured-store-block">
+        <div class="sg-featured-store-header">
+            <h2 class="sg-featured-title">Featured Store</h2>
+            <a href="#" class="sg-visit-all-link">Visit All Sites &gt;</a>
         </div>
-        <div class="footer-col">
-            <h4>Product</h4>
-            <ul>
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">Lorem ipsum</a></li>
-            </ul>
+        <div class="sg-featured-store-cards">
+            <div class="sg-featured-card">
+                <div class="sg-featured-icon"></div>
+                <div class="sg-featured-card-title">Crush grocery</div>
+                <div class="sg-featured-card-desc"><span class="material-symbols-outlined">local_shipping</span> Delivery in 12 minute</div>
+            </div>
+            <div class="sg-featured-card">
+                <div class="sg-featured-icon"></div>
+                <div class="sg-featured-card-title">Crush grocery</div>
+                <div class="sg-featured-card-desc"><span class="material-symbols-outlined">local_shipping</span> Delivery in 12 minute</div>
+            </div>
+            <div class="sg-featured-card">
+                <div class="sg-featured-icon"></div>
+                <div class="sg-featured-card-title">Crush grocery</div>
+                <div class="sg-featured-card-desc"><span class="material-symbols-outlined">local_shipping</span> Delivery in 12 minute</div>
+            </div>
         </div>
-        <div class="footer-col">
-            <h4>Company</h4>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Press</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+    </div>
+
+    <!-- Promo/Product Card -->
+    <div class="sg-promo-product-block">
+        <div class="sg-promo-product-card">
+            <div class="sg-promo-left">
+                <div class="sg-promo-badge">70% OFF</div>
+                <img src="../../assets/images/ShoppingPage-assets/blue-bag.png" alt="ProForm Adjustable Dumbbell Set" class="sg-promo-main-img">
+                <div class="sg-promo-thumbnails">
+                    <img src="../../assets/images/ShoppingPage-assets/blue-bag.png" alt="">
+                    <img src="../../assets/images/ShoppingPage-assets/blue-bag.png" alt="">
+                    <img src="../../assets/images/ShoppingPage-assets/blue-bag.png" alt="">
+                    <img src="../../assets/images/ShoppingPage-assets/blue-bag.png" alt="">
+                </div>
+            </div>
+            <div class="sg-promo-right">
+                <div class="sg-promo-category">FITNESS GOODS</div>
+                <h3 class="sg-promo-product-title">ProForm Adjustable Dumbbell Set</h3>
+                <div class="sg-promo-rating">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star_half</span>
+                    <span class="sg-promo-reviews">2,615 Reviews</span>
+                </div>
+                <div class="sg-promo-price">$399.99</div>
+                <button class="sg-promo-add-btn">Add to Bucket</button>
+                <a href="#" class="sg-promo-pay-btn">Buy with PayFit</a>
+                <div class="sg-promo-actions">
+                    <a href="#">Add to Wishlist</a>
+                    <a href="#">Compare</a>
+                    <a href="#">Share</a>
+                </div>
+                <div class="sg-promo-stock">100 sold in last 24 hr</div>
+                <div class="sg-promo-meta">
+                    SKU: 194-20-001<br>
+                    Categories: Dumbbells, Equipment, Strength Training
+                </div>
+                <div class="sg-promo-desc">
+                    Enjoy your fitness routine with the ProForm Adjustable Dumbbell Set. Designed for versatility and durability, this set allows you to customize your workout and save space. Includes free shipping and a 70% discount for a limited time.
+                </div>
+            </div>
         </div>
-        <div class="footer-col">
-            <h4>Resources</h4>
-            <ul>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
+    </div>
+
+    <!-- Sale Cards -->
+    <div class="sg-sale-cards-block">
+        <div class="sg-sale-cards-row">
+            <div class="sg-sale-card">
+                <div class="sg-sale-badge">Save<br>70%</div>
+                <img src="../../assets/images/ShoppingPage-assets/blue-container.png" alt="Blue Container">
+                <div class="sg-sale-title">Enjoy Discount on all types of Grocery & House Item</div>
+            </div>
+            <div class="sg-sale-card">
+                <div class="sg-sale-badge">Save<br>70%</div>
+                <img src="../../assets/images/ShoppingPage-assets/protein.png" alt="Protein">
+                <div class="sg-sale-title">Enjoy Discount on all types of Grocery & House Item</div>
+            </div>
+            <div class="sg-sale-card">
+                <div class="sg-sale-badge">Save<br>70%</div>
+                <img src="../../assets/images/ShoppingPage-assets/blue-cup.png" alt="Blue Cup">
+                <div class="sg-sale-title">Enjoy Discount on all types of Grocery & House Item</div>
+            </div>
+            <div class="sg-sale-card">
+                <div class="sg-sale-badge">Save<br>70%</div>
+                <img src="../../assets/images/ShoppingPage-assets/blue-earbuds.png" alt="Blue Earbuds">
+                <div class="sg-sale-title">Enjoy Discount on all types of Grocery & House Item</div>
+            </div>
         </div>
-        <div class="copyright">
-            © 2025 Trade - All Rights Reserved.
-        </div>
-    </footer>
+    </div>
+</section>
+
     <script src="../javaScript/header.js"></script>
     <script src="../javaScript/shoppingGallery.js"></script>
+    <script src="../javaScript/footer.js"></script>
     <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-</body>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </body>
 </html>
