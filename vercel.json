@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/html/home.html" },
+    { "source": "/about", "destination": "/html/aboutPage.html" },
+    { "source": "/galleryPage", "destination": "/html/galleryPage.html" },
+    { "source": "/shopping", "destination": "/html/shoppingGallery.html" },
+    { "source": "/cartPage", "destination": "/html/cartPage.html" }
+  ]
+}
